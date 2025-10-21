@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>milgram.ai — research library for LLM/RL agents</title>
+  <meta name="description" content="Personal research project exploring large-scale experiments with LLM and RL agents, inspired by Concordia (Google DeepMind) and Arcadia Impact." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #11131a;
+      --text: #e8ecf1;
+      --muted: #9aa4b2;
+      --accent: #6aa3ff;
+      --stroke: #1f2430;
+    }
+    body { margin:0; font-family: system-ui, sans-serif; background: radial-gradient(1200px 600px at 80% -10%, #182033 0%, transparent 40%) no-repeat, var(--bg); color: var(--text); line-height:1.5; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 950px; padding: 0 20px; margin: 0 auto; }
+    header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,12,16,.6); border-bottom: 1px solid var(--stroke); }
+    .nav { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .brand { font-weight: 800; letter-spacing: .5px; }
+    .brand b { background: linear-gradient(90deg, #7bcfff 0%, #a1ffce 100%); -webkit-background-clip: text; color: transparent; }
+    .btn { padding: 8px 14px; border-radius: 12px; border: 1px solid var(--stroke); background: rgba(255,255,255,.03); color: var(--text); }
+    .hero { padding: 60px 0 30px; display: grid; gap: 30px; grid-template-columns: 1.1fr .9fr; align-items:center; }
+    h1 { font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin:0 0 14px; }
+    .lead { color: var(--muted); margin-bottom:20px; }
+    .card { background: rgba(255,255,255,.03); border: 1px solid var(--stroke); border-radius: 16px; padding: 16px; }
+    .muted { color: var(--muted); }
+    .milgram { border-radius: 14px; border: 1px solid var(--stroke); max-width:100%; height:auto; }
+    section { padding: 24px 0; }
+    h2 { font-size: 22px; margin: 0 0 10px; }
+    .grid { display:grid; gap:16px; }
+    .grid.cols-2 { grid-template-columns: repeat(2,1fr); }
+    .footer { border-top:1px solid var(--stroke); color:var(--muted); font-size:14px; padding:20px 0 50px; }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr;} .grid.cols-2{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><b>milgram.ai</b> — research project</div>
+      <a class="btn" href="mailto:hello@milgram.ai">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <h1>Exploring agent behavior at scale</h1>
+        <p class="lead">A lightweight framework for large-scale social experiments with LLM and RL agents — where agents can talk, decide, and be swapped with humans for RLHF-like setups.</p>
+      </div>
+      <figure class="card">
+        <img class="milgram" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stanley_Milgram.jpg" alt="Stanley Milgram" />
+        <figcaption class="muted">Stanley Milgram, social psychologist known for his obedience experiment. Photo: Wikimedia Commons.</figcaption>
+      </figure>
+    </section>
+
+    <section class="container grid cols-2">
+      <div class="card">
+        <h2>Research focus</h2>
+        <ul>
+          <li>Scalable simulations of communicating agents.</li>
+          <li>Minimal modules for reproducible results.</li>
+          <li>Effects of social parameters on cooperation.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Modules</h2>
+        <ul>
+          <li>Agent memory & reflection</li>
+          <li>Simple experiment protocols</li>
+          <li>Visualization via Phaser</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="card">
+        <h2>Inspired by</h2>
+        <ul>
+          <li><a href="https://github.com/google-deepmind/concordia" target="_blank">Concordia (Google DeepMind)</a></li>
+          <li><a href="https://www.arcadiaimpact.org/" target="_blank">Arcadia Impact</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"></div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
